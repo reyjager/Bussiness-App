@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <!-- Import the sidebar-menu.css file from the "css" folder -->
+    <link rel="stylesheet" type="text/css" href="css/sidebar-menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <div id="sidebar">
+    <div id="sidebar-top">
+        <!-- Content for the top of the sidebar goes here -->
+        <img src="images/sste_logo.jpg" alt="Logo" width="100">
+    </div>
+
+    <div class="content-menu">
+        <ul class="menu">
+            <li><a href="#">Dashboard 1</a></li>
+            <li><a href="#">All Apps<i class="fa fa-chevron-down"></i></a></li>
+            <li id="toggleButton" class="d-flex"><a href="#">Sales<i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Manage Invoices</a></li>
+                    <li><a href="#">Create Invoice</a></li>
+                    <li><a href="#">Create Quotation</a></li>
+                    <li><a href="#">Refund Reciepts</a></li>
+                </ul>
+            <li id="toggleButton" class="d-flex"><a href="#">Work Orders<i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Work Oders</a></li>
+                    <li><a href="#">Add Work Order</a></li>
+                </ul>
+            </li>
+            <li id="toggleButton" class="d-flex"><a href="#">Clients <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Manage Clients</a></li>
+                    <li><a href="#">Add Client</a></li>
+                    <li><a href="#">Contact List</a></li>
+                    <li><a href="#">Appointments</a></li>
+                </ul>
+            <li id="toggleButton" class="d-flex"><a href="#">Inventory<i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Manage Products</a></li>
+                    <li><a href="#">Warehouse</a></li>
+                    <li><a href="#">Manage Stocks</a></li>
+                </ul>
+            <li id="toggleButton" class="d-flex"><a href="#">Purchases <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Purchase Invoices</a></li>
+                    <li><a href="#">Purchase Refunds</a></li>
+                    <li><a href="#">Manage Supplier</a></li>
+                </ul>
+            </li>
+        <li id="toggleButton" class="d-flex"><a href="#">Finance <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+            <ul>
+                <li><a href="#">Expences</a></li>
+                <li><a href="#">Treasuries and Banking</a></li>
+            </ul>
+        </li>
+ 	    <li id="toggleButton" class="d-flex"><a href="#">Accounting <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Journal Entries</a></li>
+                    <li><a href="#">Add Entry</a></li>
+                </ul>
+            </li>
+ 	    <li id="toggleButton" class="d-flex"><a href="#">Employees <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Manage Employee</a></li>
+                    <li><a href="#">New Employee</a></li>
+                </ul>
+            </li>
+	    <li id="toggleButton" class="d-flex"><a href="#">Attendance <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Attendance Logo</a></li>
+                    <li><a href="#">Attendance Record</a></li>
+                </ul>
+            </li>
+  	    <li id="toggleButton" class="d-flex"><a href="#">Payroll <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Payslip</a></li>
+                </ul>
+            </li>
+ 	    <li id="toggleButton" class="d-flex"><a href="#">Reports <i id="chevronIcon" class="bi bi-chevron-compact-down ml-auto"></i></a>
+                <ul>
+                    <li><a href="#">Sales Report</a></li>
+                    <li><a href="#">Employee Report</a></li>
+                    <li><a href="#">Purchase Report</a></li>
+                    <li><a href="#">Product Report</a></li>
+                </ul>
+        </li>
+        </ul>
+    </div>
+</div>
+
+
+    <div id="main-content">
+        <div id="main-content-top">
+            <div class="menu_toggle" id="icon_toggle">
+                <i class="bi bi-list-task icon"></i>
+	    </div>
+            
+	    <div>
+               <button id="login-button">Login</button>
+ 	       <button id="register-button">Register</button>
+	    </div>
+        </div>
+	<div class="content_body">
+	   <div class="content">
+		 <!-- Main page content goes here -->
+           	<h1>Welcome to Your Web Page</h1>
+           	<p>This is the main content area of your web page.</p>
+	   </div>
+          
+	</div>
+    </div>
+
+  
+<script src = "js/jquery-3.4.1.min.js"></script>
+<!-- Sidebar Accordion JS -->
+<script src="js/sidebar-menu.js"></script>
+
+</body>
+</html>

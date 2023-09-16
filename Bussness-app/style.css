@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 100%;
+}
+
+#sidebar {
+    width: 20%;
+    background-color: #333; /* Sidebar background color */
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+#sidebar-top {
+    background-color: #f4f4f4; /* Light background color for the top div */
+    padding: 10px;
+
+}
+
+#main-content {
+  padding: 0px;
+	background: #fff;
+}
+
+#main-content-top {
+    background-color: #348453;; /* Cool background color for the top div */
+    color: #fff;
+    padding: 10px;
+    padding-left: 20%;
+    display: flex;
+    justify-content: space-between; /* Add this to align items horizontally */
+    align-items: center;
+
+}
+.content-menu {
+	width: 100%;
+	min-width: 200px;
+	display: inline-block;
+	line-height: 20%;
+}
+
+#login-register-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the login/register buttons to the right */
+}
+
+#login-button,
+#register-button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin to create space between the buttons */
+}
+#menu_toggle{
+    padding-left: 20px;
+}
+.icon{
+font-size:24px;
+font-weight:bold;
+border: 2px dashed white;
+padding:5px;
+margin: 2px;
+ }
+/* this is start of web content*/
+.content_body{
+padding-left: 20%
+}
+.content{
+padding:20px;
+
+background: #dddcdc;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.menu{
+font-size:15px;
+}
+.menu li a{
+padding: 1px;
+font-size: 15px
+}
+
+.content-menu .menu { width: 100%; }
+.content-menu ul { list-style: none; }
+.content-menu .menu li a {
+	color: #494949;
+	display: block;
+	padding: 15px 20px;
+	background: #d8d8d8;
+}
