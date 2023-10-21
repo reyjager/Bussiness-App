@@ -62,7 +62,7 @@ document.addEventListener('click', function(event) {
         if (subElement.classList.contains('hideme')) {
           subElement.classList.remove('hideme');
           navbar.style.width = '200px';
-          na.style.justifyContent = 'space-around';
+          navbar.style.justifyContent = 'space-around';
           
           
       
