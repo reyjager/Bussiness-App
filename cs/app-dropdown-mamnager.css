@@ -1,0 +1,57 @@
+
+/* dropdown */
+.app-manager-dropdown {
+    position: fixed;
+    width: 250px;
+    margin: 0 2px;
+    border-radius: 4px;
+    background: #fff;
+    z-index: 222222;
+    border: 1px solid rgba(33, 50, 66, 0.5);
+    display: none;
+    max-height: 70vh;
+}
+
+.app-manager-dropdown-app {
+    
+    background: #fff;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 12px;
+    color: #3a3e63;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.7);
+}
+.app-manager-dropdown-app-icon {
+    font-size: 24px;
+    width: 32px;
+    line-height: 1;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.app-manager-dropdown {
+    display: none;
+}
+
+.app-manager-dropdown-app i.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.app-manager-dropdown-app i.fa-file-invoice {
+    color: #B900F6;
+}
+
+.app-manager-dropdown-app i.fa-user-tie {
+    color: #f37535;
+}
+
+.app-manager-dropdown-app span {
+    font-size: 18px;
+}
