@@ -9,14 +9,3 @@ function toggleAppDropdown(event) {
     // Prevent the click event from propagating to parent elements
     event.stopPropagation();
 }
-
-// dropdown dynamic
-const dropdown = document.querySelector(".app-manager-dropdown");
-
-// dropdown display
-function toggleDropdown() {
-    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
-}
-
-// dropdown event listener
-dropdown.addEventListener("click", toggleDropdown);

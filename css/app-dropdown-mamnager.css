@@ -34,24 +34,3 @@
     display: inline-flex;
     align-items: center;
 }
-
-.app-manager-dropdown {
-    display: none;
-}
-
-.app-manager-dropdown-app i.icon {
-    font-size: 24px;
-    margin-right: 10px;
-}
-
-.app-manager-dropdown-app i.fa-file-invoice {
-    color: #B900F6;
-}
-
-.app-manager-dropdown-app i.fa-user-tie {
-    color: #f37535;
-}
-
-.app-manager-dropdown-app span {
-    font-size: 18px;
-}

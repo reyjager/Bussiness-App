@@ -1,3 +1,129 @@
+body{
+  margin: 0;
+  padding:0;
+  color: #3a3e63;
+  font-family: "Roboto","Segoe UI",Tahoma,Helvetica,"Open Sans",arial,serif;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  background: #f6f9fc;
+  background-color: e4ebf2;
+  transition: all 0.2s ease-in-out;
+  top: 0px;
+  border-right: 1px solid #d6d6d6;
+  box-shadow: none;
+  z-index: 100;
+  display: flex;
+}
+
+.main-nav {
+  width: 200px;
+  color: #fff;
+  border: 1px solid rgba(238, 238, 238, 0.7);
+  height: auto;
+}
+.content {
+  flex-grow: 1; /* Take up all remaining space */
+  background-color: #e4ebf2;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #ffff;
+  height: 100px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.7);
+}
+.logo-img {
+  display: block;
+}
+.logo-img img {
+  width: 175px; /* Set the desired width */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+.accord-button{
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #212529;
+  background-color: #fff;
+  /* overflow-anchor: none; */
+  padding: 10px 15px;
+  font-size: .9rem !important;
+  width: 100%;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.7);
+}
+
+.accord i.fa-solid:first-child{
+  width: 35px;
+  opacity: 0.8;
+}
+.fa-chevron-down, i.fa-filter {
+  margin-left: auto; /* This pushes the icon to the right. */
+}
+.fa-chevron-down{ /*  */
+  font-size: 10px;
+}
+.accord-body{
+  display: block;
+  font-size: 12px;
+  line-height: 20px !important;
+  font-weight: 500;
+  color: #3a3b6c;
+  position: relative;
+  border-bottom: 1px solid rgba(238, 238, 238, .50); 
+  background: #f6f9fc;
+  width: 100%;
+}
+
+.accord-body ul{
+  padding-left: 0;
+}
+.accord-body> ul > li {
+  list-style: none;
+  padding:0 1.25em;
+  padding: 10px 30px;
+  border-bottom: 1px solid rgba(238, 238, 238, .50); 
+}
+.accord-body ul li a{
+  color: #3a3b6c;
+  text-decoration: none;
+}
+a.show .accord-body > ul> li> a {
+  color: #3a3b6c;
+  text-decoration: none;
+}
+
+.accord-body li:first-child{
+  box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.1);
+}
+.accord-body li:last-child{
+  box-shadow: inset 0px -2px 5px 0px rgba(0,0,0,0.1);
+}
+
+.fa-lg {
+  font-size: 1.5em;
+  line-height: 1.5em !important;
+}
+.apps-filter > i:first-child, .apps-filter>i:last-child{
+  color: darkcyan;
+}
+
+.rotateup{
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+.rotatedown{
+  transform: rotate(0deg);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+/******************************************/
 
 
 .content {
@@ -10,7 +136,7 @@
   justify-content: space-between;
   background-color: rgb(9, 96, 96);
   color: white;
-  
+ 
 }
 .header-content ul{
   margin: 5px;
@@ -20,7 +146,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  
+ 
   margin: 0;
   padding: 0 10px;
   
@@ -77,7 +203,7 @@ li.help > a{
 .help,
 .notification,
 .account
-  {
+ {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -89,7 +215,7 @@ li.help > a{
 .help ul li,
 .notification ul li,
 .account ul li
-  {
+ {
   align-items: center;
   margin: 0 ;
   padding: 0 ;
@@ -113,7 +239,7 @@ margin-top: 5px;
   padding: 0;
   font-size: 12px;
   margin: 0 !important;
-  
+ 
 }
 
 /**************************/
@@ -288,46 +414,4 @@ notification > ul > li > i,
 .account > ul > li:nth-child(1) > i{
   color: white;
   font-size: 30px;
-}
-/* Apply common styles for shortcut buttons */
-.shortcutBtn {
-  text-align: center;
-  padding: 0;
-  background: #ffffff;
-  border: 1px solid #d1d1d1;
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-
-.shortcutBtn:hover {
-  transform: scale(1.05);
-}
-
-/* Define the text color for each shortcut button */
-.text-primary {
-  color: #007bff;
-}
-
-.text-info {
-  color: #17a2b8;
-}
-
-.text-success {
-  color: #27c24c;
-}
-
-.text-info {
-  color: #598cb3;
-}
-.fa-file-invoice {
-  color: #007bff;
-}
-.fa-receipt{
-  color: #17a2b8;
-}
-.fa-user-tie{
-  color: #27c24c;
-}
-.fa-user-plus{
-  color: #598cb3;
 }
