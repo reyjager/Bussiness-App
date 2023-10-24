@@ -602,10 +602,10 @@
               <div id="manage-invoice-page"> <!-- manage- invoice -page  style="display: none;"   -->
                 <div class="">
                   
-                  <div class="page-head bg-white py-4">
+                  <div class="page-head bg-white py-2 m-4" >  
                     <div class="container">
-                      <div class="row ">
-                        <div class="col-6 ">
+                      <div class="row d-flex">
+                        <div class="col-6 " >
                             <div class="actionItemBtn d-flex align-items-center">
                                 <div class="btn-group none-view px-2 bg-light">
                                     <span type="button" class="btn btn-default" title="Select">
@@ -638,13 +638,17 @@
                                           <li><a href="#" ><i class=""></i> Send Sms</a></li>
                                       </ul>
                                 </div>
-                                <div class="right" id="pagin-desc">
-                                  <span class="px-4">
-                                      <span>
-                                          <span id="nav-from-record" class="ts">1</span>-<span id="nav-to-record">20</span>
-                                      </span> of
-                                      <span id="nav-of-record" >1254</span>
-                                  </span>
+                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                  <div class="btn-group me-2" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-outline-secondary">1</button>
+                                    <button type="button" class="btn btn-outline-secondary">2</button>
+                                    <button type="button" class="btn btn-outline-secondary">3</button>
+                                    <button type="button" class="btn btn-outline-secondary">4</button>
+                                  </div>
+                                </div>
+
+                                <div class="right" id="pagin-desc d-flex">
+                                  
                                   <div class="btn-group select-item-gro	button bg-light py-2 " role="group" aria-label="">
                                     <a href="#" class="btn btn-default btn-md "title="down" ><i class="fa-solid fa-chevron-left"></i></a>
                                     <a href="#" class="btn btn-default btn-md " title="up"><i class="fa-solid fa-chevron-right"></i></a>
@@ -655,21 +659,56 @@
                     
                             </div>
                         </div>
-                        <div class="col-6 ">
-                            <div class=" text-end">
-                                <div class="top-actions">
-                                  <a class="btn  btn-lg btn-default right button"> <i class="fa fa-pie-chart"></i> </a>
-                                  <a  class="add-new-btn  btn btn-success btn-addon width-auto btn-lg  button right">
-                                      <span><i class="fa fa-plus"></i>New Invoice</span></a>
-                                  <a class="btn btn-lg btn-default right none-view test" >Appointments</a>
-                    
-                                </div>
+                        <div class="col-6 d-flex justify-content-end clearfix" >
+                            <div class="top-actions d-flex btn-group bg-light px-2 m-2">
+                              <a class="btn align-self-center"><i class="fa fa-pie-chart"></i> </a>
+                              <a class="btn align-self-center">Appointments</a>
                             </div>
+                            
+                              <a  class="  btn btn-success btn-addon btn-lg p-2 m-2">
+                                <span><i class="fa fa-plus pr-2 mx-2 align-self-center"></i>New Invoice</span>
+                              </a>
                         </div>
                       </div>
                     </div>
                   </div>
-                
+                  
+                  <div class="manage-invoice-content mb-4">
+                    <div class="data-head container bg-white">
+                      <div>
+                        <div class="row "><h2>Search</h2></div>
+                        <div class="option-search form-group">
+                          <div class="row d-flex">
+                            <div class="col-4 ">
+                              <div class="d-block text-left form-group ">
+                                <h5 class="">Client</h5><input type="text" title="client" class="form-control w-100">
+                              </div>
+                            </div>
+                            <div class="col-4" >
+                              <div class="d-block text-left form-group">
+                                <h5 class="">Invoince No.</h5><input type="text" title="client" class="form-control w-100">
+                              </div>
+                            </div>
+                            <div class="col-4 ">
+                              <div class="d-block text-left form-group">
+                                <h5 class="">Any Status</h5><input type="text" title="client" class="form-control w-100">
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                            <label class="btn btn-outline-secondary" for="btncheck1"><i class="fa-solid fa-sliders bg-light pr-2"></i>Advanced Search</label>
+                          </div>
+                          <div class="btn-group float-right" role="group" aria-label="Basic checkbox toggle button group ">
+                            <label class="btn btn-outline-secondary mx-2" for="btncheck1">Reset</label>
+                            <label class="btn btn-outline-secondary" for="btncheck1">Search</label>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
 
