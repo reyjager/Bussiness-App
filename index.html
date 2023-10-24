@@ -507,7 +507,7 @@
 <!-- -------------------------------------------------------- -->
               <div id="human-resource-page clearfix" > <!-- human-resuorces-page  style="display: none;"   -->
 
-                <div class="page-head bg-white container-fluid m-0 p-0" >
+                <div class="page-head bg-white m-0 p-0" >
                   <div class="container py-4">
                     <div class="row d-flex">
                       <div class="col-6 align-content-center">
@@ -600,69 +600,75 @@
               </div>
 <!-- -------------------------------------------------------- -->
               <div id="manage-invoice-page"> <!-- manage- invoice -page  style="display: none;"   -->
-                <div class="pages-head d-flex align-items-center border-bottom py-2 container-fluid ">
+                <div class="">
                   
-                  <div class="row pages-head bg-white container">
-                    <div class="col-6 ">
-                      
-                        <div class="actionItemBtn d-flex align-items-center">
-                            <div class="btn-group select-items none-view px-2">
-                                <span type="button" class="btn btn-default" title="Select">
-                                    <div class="clip-check check-info">
-                                      <label for="select_all_chk">Select All</label>
-                                      <input class=" responsive_check_row check-input" type="checkbox" id="select_all_chk" title="" name="select_all_chk" aria-label="">
-                                      <label for="select_all_chk"> </label>
-                                    </div>
-                                </span>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-label="dp-item">
-                                  <span class="caret"></span>
-                                </button>
+                  <div class="page-head bg-white py-4">
+                    <div class="container">
+                      <div class="row ">
+                        <div class="col-6 ">
+                            <div class="actionItemBtn d-flex align-items-center">
+                                <div class="btn-group none-view px-2 bg-light">
+                                    <span type="button" class="btn btn-default" title="Select">
+                                        <div class="clip-check check-info">
+                                          <input class=" responsive_check_row check-input" type="checkbox" id="select_all_chk" title="" name="select_all_chk" aria-label="">
+                                          <label for="select_all_chk" class="mb-0 py-2">Select All</label>
+                                          <label for="select_all_chk"></label>
+                                        </div>
+                                    </span>
+                                    <button type="button" class="btn btn-default" data-toggle="dropdown" aria-label="dp-item">
+                                      <span class="caret"></span>
+                                    </button>
                     
-                                <ul class="dropdown-menu">
-                                    <li><a id="index-select-type-none" href="#">None</a></li>
-                                    <li><a id="index-select-type-page" href="#">All <small>(Current Page)</small></a></li>
-                                    <li><a id="index-select-type-all-filtered" href="#">All Filtered <small>(All Pages)</small></a></li>
-                                </ul>
-                            </div>
-                            <div class="right" id="pagin-desc">
-                              <span class="px-4">
-                                  <span>
-                                      <span id="nav-from-record" class="ts">1</span>-<span id="nav-to-record">20</span>
-                                  </span> of
-                                  <span id="nav-of-record" >1254</span>
-                              </span>
-                          </div>
-                    
-                            <div class="btn-group do-actions none-view">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Actions For Selected">
-                                    Actions <span data-listing-limit="20" data-listing-current-page="20" id="action-selected-count"></span>
-                                  <span class="caret"></span>
-                                </button>
-                                    <ul class="dropdown-menu" id="listing-select-actions">
-                                        <li><a href="#" ><i class=""></i> Send To Client</a></li>
-                                        <li><a href="#" ><i class=""></i> Mark as paid</a></li>
-                                        <li><a href="#" ><i class=""></i> Print PDF</a></li>
-                                        <li><a href="#" ><i class=""></i> Export</a></li>
-                                        <li><a href="#" ><i class=""></i> Send Sms</a></li>
+                                    <ul class="dropdown-menu">
+                                        <li><a id="index-select-type-none" href="#">None</a></li>
+                                        <li><a id="index-select-type-page" href="#">All <small>(Current Page)</small></a></li>
+                                        <li><a id="index-select-type-all-filtered" href="#">All Filtered <small>(All Pages)</small></a></li>
                                     </ul>
+                                </div>
+                                <div class="btn-group none-view bg-light px-2 m-2 py-2">
+                                  <button type="button" class="btn btn-default" data-toggle="dropdown" title="Actions For Selected">
+                                      Actions <span data-listing-limit="20" data-listing-current-page="20" id="action-selected-count"></span>
+                                    <span class="caret"></span>
+                                  </button>
+                                      <ul class="dropdown-menu" id="listing-select-actions">
+                                          <li><a href="#" ><i class=""></i> Send To Client</a></li>
+                                          <li><a href="#" ><i class=""></i> Mark as paid</a></li>
+                                          <li><a href="#" ><i class=""></i> Print PDF</a></li>
+                                          <li><a href="#" ><i class=""></i> Export</a></li>
+                                          <li><a href="#" ><i class=""></i> Send Sms</a></li>
+                                      </ul>
+                                </div>
+                                <div class="right" id="pagin-desc">
+                                  <span class="px-4">
+                                      <span>
+                                          <span id="nav-from-record" class="ts">1</span>-<span id="nav-to-record">20</span>
+                                      </span> of
+                                      <span id="nav-of-record" >1254</span>
+                                  </span>
+                                  <div class="btn-group select-item-gro	button bg-light py-2 " role="group" aria-label="">
+                                    <a href="#" class="btn btn-default btn-md "title="down" ><i class="fa-solid fa-chevron-left"></i></a>
+                                    <a href="#" class="btn btn-default btn-md " title="up"><i class="fa-solid fa-chevron-right"></i></a>
+                                    </div>
                               </div>
                     
-
-                        </div>
-                    </div>
-                    <div class="col-6 ">
-                        <div class=" text-end">
-                            <div class="top-actions">   
-                              <a class="btn  btn-lg btn-default right button"> <i class="fa fa-pie-chart"></i> </a>                       
-                              <a  class="add-new-btn  btn btn-success btn-addon width-auto btn-lg  button right">
-                                  <span><i class="fa fa-plus"></i>New Invoice</span></a>
-                              <a class="btn btn-lg btn-default right none-view test" >Appointments</a>
-                                          
+                                
+                    
                             </div>
                         </div>
-                
+                        <div class="col-6 ">
+                            <div class=" text-end">
+                                <div class="top-actions">
+                                  <a class="btn  btn-lg btn-default right button"> <i class="fa fa-pie-chart"></i> </a>
+                                  <a  class="add-new-btn  btn btn-success btn-addon width-auto btn-lg  button right">
+                                      <span><i class="fa fa-plus"></i>New Invoice</span></a>
+                                  <a class="btn btn-lg btn-default right none-view test" >Appointments</a>
+                    
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 
 
                 </div>
@@ -672,8 +678,6 @@
               
               
             </div>    <!-- all pages container -->
-
-        
           </div> <!-- end d-flex flex-column -->      
         </div> <!-- end content -->    
       </div>
