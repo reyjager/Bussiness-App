@@ -18,11 +18,13 @@ body{
   z-index: 100;
   display: flex;
 }
-
+.nav-width{
+  width: 200px !important;
+}
 .main-nav {
   width: 200px;
   color: #fff;
-  border: 1px solid rgba(238, 238, 238, 0.7);
+  /* border: 1px solid rgba(238, 238, 238, 0.7); */
   height: auto;
 }
 .content {

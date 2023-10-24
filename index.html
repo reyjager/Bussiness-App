@@ -25,641 +25,660 @@
 
 </head>
 <body>
- 
-    <div class="main-nav"> <!-- navigation bar -->
-      <div class="logo"> <!-- logo -->
-        <a class="logo-img" href="#" title="SSTE Logo"><img id="img-logo" alt="logo image" src="/images/sste_logo.jpg"></a>
-      </div>
-      <div class="accord" id="sidebar"> <!-- sidebar -->
-        <div class="accord-item"> <!-- Dashboard -->
-            <div class="accord-button" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard"  >
-                <i class="fa-solid fa-house fa-lg"></i><span>Dashboard</span><i class="fa-solid fa-chevron-down rotate180"></i>
-            </div>
-
-          <div id="dashboard" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-                <ul>
-                  <li data-id="sales-page" onclick="subMenuClick(this.getAttribute('data-id'))"><a>Sales</a></li>
-                  <li data-id="human-resources-page" onclick="subMenuClick(this.getAttribute('data-id'))"><a>Human Resources</a></li>
-                </ul>
-            </div>
-          </div>
-        </div>
-          
-        <div class=" accord-item app-manager-dropdown-btn"> <!-- all apps filter -->
-          <div class="accord-button apps-filter" type="button" onclick="toggleAppDropdown(event)">
-            <i class="fa-solid fa-shapes fa-lg"></i><span>All Apps</span><i class="fa-solid fa-filter"></i>
-        </div>
-        </div>
-          
-        <div class="app-manager-dropdown" >  <!-- app div -->
-            <div class="app-manager-dropdown-app"> 
-              <i class="fa-solid fa-file-invoice fa-lg"></i> 
-              <span >Sales</span>
-          </div> 
-          <div class="app-manager-dropdown-app" > 
-              <i class="fa-solid fa-user-tie"></i> 
-              <span >CRM</span>
-          </div> 
-          <div class="app-manager-dropdown-app" > 
-              <i class="fa-solid fa-users-line"></i> 
-              <span >Human Resources</span>
-          </div> 
-          <div class="app-manager-dropdown-app" > 
-              <i class="fa-solid fa-cubes-stacked"></i> 
-              <span >Inventory &amp; Purchases</span>
-          </div> 
-          <div class="app-manager-dropdown-app" > 
-              <i class="fa-solid fa-clipboard-user"></i> 
-              <span >Operations</span>
-          </div> 
-          <div class="app-manager-dropdown-app" > 
-              <i class="fa-solid fa-calculator" ></i> 
-              <span >Accounting</span>
-          </div> 
-        </div>
-    
-        <div class="accord-item">  <!-- Sales -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#sales"  aria-controls="sales">
-                <i class="fa-solid fa-file-invoice fa-lg"></i><span>Sales</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
-      
-          <div id="sales" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-                <ul>
-                  <li > <a href="#" data-id="view-invoices" > Manage Invoices </a> </li> 
-                  <li > <a href="#" data-id="create-invoice" > Create Invoice </a> </li> 
-                  <li > <a href="#" data-id="estimates" > Manage Estimates </a> </li> 
-                  <li > <a href="#" data-id="create-estimate" > Create Estimate </a> </li> 
-                  <li > <a href="#" data-id="estimates" > Credit Notes </a> </li> 
-                  <li > <a href="#" data-id="estimates" > Refund Receipts </a> </li> 
-                  <li > <a href="#" data-id="recurring-invoices" > Recurring Invoices </a> </li> 
-                  <li > <a href="#" data-id="payment-history" > Client Payments </a> </li> 
-                </ul>
-            </div>
-          </div>
-        </div>
-    
-        <div class="accord-item"> <!-- Work Orders -->
-          <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#work-order" >
-              <i class="fa-solid fa-clipboard-user fa-lg"></i> <span>Work Orders</span><i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div id="work-order" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-                <ul>
-                  <li > <a href="#" data-id="work-order" > Work Orders </a> </li> 
-                  <li > <a href="#" data-id="add-new-order" > Add Work Order </a> </li> 
-                </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Clients -->
-              <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#clients">
-                <i class="fa-solid fa-user-tie fa-lg"></i> <span>Clients</span><i class="fa-solid fa-chevron-down"></i>
-              </div>
-          
-            <div id="clients" class="accord-collapse collapse" data-bs-parent="#sidebar">
-              <div class="accord-body">
-                <ul>
-                  <li> <a href="#" data-id="view-clients" > Manage Clients </a> </li> 
-                  <li> <a href="#" data-id="add-new-client" > Add New Client </a> </li> 
-                  <li> <a href="#" data-id="view-clients" > Appointments </a> </li> 
-                  <li> <a href="#" data-id="view-clients" > Contacts List </a> </li> 
-                  <li> <a href="#" data-id="crm" > CRM </a> </li> 
-                </ul>
-              </div>
-            </div>
-        </div>
-
-        <div class="accord-item">  <!-- Inventory -->
-              <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#inventory" >
-                <i class="fa-solid fa-cubes-stacked fa-lg"></i> <span>Inventory</span><i class="fa-solid fa-chevron-down"></i>
-              </div>
-      
-            <div id="inventory" class="accord-collapse collapse" data-bs-parent="#sidebar">
-              <div class="accord-body">
-                <ul>
-                  <li> <a href="#" data-id="manage-product" class="nav-link" > Manage Products </a> </li> 
-                  <li> <a href="#" data-id="manage-request" class="nav-link"> Manage Requisitions </a> </li> 
-                  <li> <a href="#" data-id="track-product" class="nav-link"> Product Tracking </a> </li> 
-                  <li> <a href="#" data-id="warehouse" class="nav-link"> Warehouses </a> </li> 
-                  <li> <a href="#" data-id="manage-stocks" class="nav-link"> Manage Stocktakings </a> </li> 
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        <div class="accord-item">  <!-- Purchase -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#purchase" >
-              <i class="fa-solid fa-cart-shopping fa-lg"></i> <span>Purchases</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
-      
-          <div id="purchase" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-            <ul>
-              <li> <a href="#" data-id="purchase-invoice" > Purchase Invoices </a> </li> 
-              <li> <a href="#" data-id="mange-refund" > Purchase Refunds </a> </li> 
-              <li> <a href="#" data-id="manage supplier" > Manage Suppliers </a> </li> 
-              <li> <a href="#" data-id="supplier-payments" > Suppliers Payments </a> </li> 
-            </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Finance -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#finance" >
-              <i class="fa-solid fa-money-check-dollar fa-lg"></i> <span>Finance</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"> 
         
-          <div id="finance" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul>
-                <li> <a href="#" data-id="expenses" > Expenses </a> </li> 
-                <li> <a href="#" data-id="saved-reports" > Treasuries &amp; Bank Accounts </a> </li> 
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Accounting -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#accounting">
-              <i class="fa-solid fa-calculator fa-lg"></i> <span>Accounting</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
-        
-          <div id="accounting" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul>
-                <li> <a href="#" data-id="journal-entries" > Journal Entries </a> </li> 
-                <li> <a href="#" data-id="add-entry" > Add Entry </a> </li> 
-                <li> <a href="#" data-id="char-account" > Chart of Accounts </a> </li> 
-                <li> <a href="#" data-id="accounting-settings" > Accounting Settings </a> </li> 
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Request -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#request" >
-              <i class="fa-solid fa-list fa-lg"></i> <span>Requests</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
-          
-          <div id="request" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-             <ul> <li><a href="#" data-id="manage-request"> Manage Requests </a></li> </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Employees -->
-            <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#employees" >
-              <i class="fa-solid fa-users-line fa-lg"></i> <span>Employees</span><i class="fa-solid fa-chevron-down"></i>
-            </div>
-          
-          <div id="employees" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul><li><a href="#" data-id="add-new-client" > Manage Employees </a> </li> </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Attendance -->
-          <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#attendance" >
-            <i class="fa-solid fa-clipboard-user fa-lg"></i> <span>Attendance</span><i class="fa-solid fa-chevron-down"></i>
-          </div>
-        
-          <div id="attendance" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul>
-                <li><a href="#" data-id="attendance-log" > Attendance Logs </a> </li> 
-                <li><a href="#" data-id="dailay-attendance" > Attendance Days </a> </li> 
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Payroll -->
-          <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#payroll" >
-            <i class="fa-solid fa-file-invoice-dollar fa-lg"></i> <span>Payroll</span><i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div id="payroll" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul>
-                <li><a href="#" data-id="contracts" > Contracts </a> </li> 
-                <li><a href="#" data-id="payslips" > Payslips </a> </li> 
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accord-item">  <!-- Reports -->
-          <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#reports">
-            <i class="fa-solid fa-rectangle-list fa-lg"></i> <span>Reports</span><i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div id="reports" class="accord-collapse collapse" data-bs-parent="#sidebar">
-            <div class="accord-body">
-              <ul>
-                <li> <a href="#" data-id="sales-reports" > Sales Reports </a> </li> 
-                <li> <a href="#" data-id="purchase-reports" > Purchases Reports </a> </li> 
-                <li> <a href="#" data-id="accounting-reports" > Accounting Reports </a> </li> 
-                <li> <a href="#" data-id="cheques-reports"> Cheques Reports </a> </li> 
-                <li> <a href="#" data-id="point-credit-reports" > Points and Credits Reports </a> </li> 
-                <li> <a href="#" data-id="workflo-reports" > Workflow Reports </a> </li> 
-                <li> <a href="#" data-id="work-order-reports" > Work Order Reports </a> </li> 
-                <li> <a href="#" data-id="clients-reports" > Clients' Reports </a> </li> 
-                <li> <a href="#" data-id="store-reports" > Store Reports </a> 
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content data-content" > <!-- content -->
-      <div class="">
-        
-        <div class="header-content container-fluid p-md-0">  <!-- header position-fixed -->
-          <div class="row">
-
-            <div class="col-6 header-left align-items-center ">
-                <ul class="d-flex align-items-center p-md-0 m-0">
-                  <li class="shrink-sidebar list-unstyled p-md-0 "onclick="shrinkBtnClick(event)" >
-                    <i class="fa-solid fa-arrow-right-arrow-left p-3" ></i>
-                  </li>
-                  <li class="list-unstyled"><a>Dashboard > Sales </a></li>
-                 
-                </ul>
-                
-            </div>
+          <div class="main-nav h-100 fixed-top"> <!-- navigation bar -->
             
-            <div class="col-6 header-right d-flex align-items-center justify-content-end"> <!-- header right -->
-                <div class="help "> <!-- help -->
-                  <ul>
-                    <li class="d-flex">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span class="text-decoration-none align-items-center"  >Help</span>
-                    </li>
-                  </ul>
+            <div class="accord" id="sidebar"> <!-- sidebar -->
+              <div class="logo"> <!-- logo -->
+              <a class="logo-img" href="#" title="SSTE Logo"><img id="img-logo" alt="logo image" src="/images/sste_logo.jpg"></a>
+            </div>
+              <div class="accord-item"> <!-- Dashboard -->
+                  <div class="accord-button" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard"  >
+                      <i class="fa-solid fa-house fa-lg"></i><span>Dashboard</span><i class="fa-solid fa-chevron-down rotate180"></i>
+                  </div>
+      
+                <div id="dashboard" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                      <ul>
+                        <li data-id="sales-page" onclick="subMenuClick(this.getAttribute('data-id'))"><a>Sales</a></li>
+                        <li data-id="human-resources-page" onclick="subMenuClick(this.getAttribute('data-id'))"><a>Human Resources</a></li>
+                      </ul>
+                  </div>
                 </div>
-                <div class="notification "><!-- notification -->
-                  <ul>
-                    <li class="d-flex">
-                      <i class="fa-solid fa-bell"></i>
-                      <span>2352</span>
-                    </li>
-                  </ul> 
+              </div>
+                
+              <div class=" accord-item app-manager-dropdown-btn"> <!-- all apps filter -->
+                <div class="accord-button apps-filter" type="button" onclick="toggleAppDropdown(event)">
+                  <i class="fa-solid fa-shapes fa-lg"></i><span>All Apps</span><i class="fa-solid fa-filter"></i>
+              </div>
+              </div>
+                
+              <div class="app-manager-dropdown" >  <!-- app div -->
+                  <div class="app-manager-dropdown-app"> 
+                    <i class="fa-solid fa-file-invoice fa-lg"></i> 
+                    <span >Sales</span>
                 </div> 
-
-                <div class="account" onclick="toggleAccountMenu(event)"> <!-- account -->
-                  <ul class="d-flex align-items-center px-0">
-                    <li><i class="fa-solid fa-circle-user px-2"></i></li>
-                    <li class="user-account d-flex align-items-start justify-content-start">
-                      <a >Login<span class="caret"></span></a>
-                      <a>Baladiyah Branch</a>
-                    </li>
-                    <li class="account-menu d-none"  ><!--style="display: none;"-->
-                        <ul >
-                            <li><i class="fa-solid fa-user-tie "></i><a href="#">My Account</a></li>
-                            <li><i class="fa-regular fa-envelope "></i><a href="#">Change Email</a></li>
-                            <li><i class="fa-solid fa-key "></i><a href="#">Change Password</a></li>
-                            <li><i class="fa-solid fa-warehouse "></i><a href="#">Madina Branch</a></li>
-                            <li><i class="fa-solid fa-warehouse "></i><a href="#">Darb Branch</a></li>
-                            <li><i class="fa-solid fa-lock "></i><a href="#">Log Out</a></li>
-                        </ul>
-                    </li>
-                    
+                <div class="app-manager-dropdown-app" > 
+                    <i class="fa-solid fa-user-tie"></i> 
+                    <span >CRM</span>
+                </div> 
+                <div class="app-manager-dropdown-app" > 
+                    <i class="fa-solid fa-users-line"></i> 
+                    <span >Human Resources</span>
+                </div> 
+                <div class="app-manager-dropdown-app" > 
+                    <i class="fa-solid fa-cubes-stacked"></i> 
+                    <span >Inventory &amp; Purchases</span>
+                </div> 
+                <div class="app-manager-dropdown-app" > 
+                    <i class="fa-solid fa-clipboard-user"></i> 
+                    <span >Operations</span>
+                </div> 
+                <div class="app-manager-dropdown-app" > 
+                    <i class="fa-solid fa-calculator" ></i> 
+                    <span >Accounting</span>
+                </div> 
+              </div>
+          
+              <div class="accord-item">  <!-- Sales -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#sales"  aria-controls="sales">
+                      <i class="fa-solid fa-file-invoice fa-lg"></i><span>Sales</span><i class="fa-solid fa-chevron-down"></i>
+                  </div>
+            
+                <div id="sales" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                      <ul>
+                        <li > <a href="#" data-id="view-invoices" > Manage Invoices </a> </li> 
+                        <li > <a href="#" data-id="create-invoice" > Create Invoice </a> </li> 
+                        <li > <a href="#" data-id="estimates" > Manage Estimates </a> </li> 
+                        <li > <a href="#" data-id="create-estimate" > Create Estimate </a> </li> 
+                        <li > <a href="#" data-id="estimates" > Credit Notes </a> </li> 
+                        <li > <a href="#" data-id="estimates" > Refund Receipts </a> </li> 
+                        <li > <a href="#" data-id="recurring-invoices" > Recurring Invoices </a> </li> 
+                        <li > <a href="#" data-id="payment-history" > Client Payments </a> </li> 
+                      </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="accord-item"> <!-- Work Orders -->
+                <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#work-order" >
+                    <i class="fa-solid fa-clipboard-user fa-lg"></i> <span>Work Orders</span><i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div id="work-order" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                      <ul>
+                        <li > <a href="#" data-id="work-order" > Work Orders </a> </li> 
+                        <li > <a href="#" data-id="add-new-order" > Add Work Order </a> </li> 
+                      </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Clients -->
+                    <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#clients">
+                      <i class="fa-solid fa-user-tie fa-lg"></i> <span>Clients</span><i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                
+                  <div id="clients" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                    <div class="accord-body">
+                      <ul>
+                        <li> <a href="#" data-id="view-clients" > Manage Clients </a> </li> 
+                        <li> <a href="#" data-id="add-new-client" > Add New Client </a> </li> 
+                        <li> <a href="#" data-id="view-clients" > Appointments </a> </li> 
+                        <li> <a href="#" data-id="view-clients" > Contacts List </a> </li> 
+                        <li> <a href="#" data-id="crm" > CRM </a> </li> 
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Inventory -->
+                    <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#inventory" >
+                      <i class="fa-solid fa-cubes-stacked fa-lg"></i> <span>Inventory</span><i class="fa-solid fa-chevron-down"></i>
+                    </div>
+            
+                  <div id="inventory" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                    <div class="accord-body">
+                      <ul>
+                        <li> <a href="#" data-id="manage-product" class="nav-link" > Manage Products </a> </li> 
+                        <li> <a href="#" data-id="manage-request" class="nav-link"> Manage Requisitions </a> </li> 
+                        <li> <a href="#" data-id="track-product" class="nav-link"> Product Tracking </a> </li> 
+                        <li> <a href="#" data-id="warehouse" class="nav-link"> Warehouses </a> </li> 
+                        <li> <a href="#" data-id="manage-stocks" class="nav-link"> Manage Stocktakings </a> </li> 
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+      
+              <div class="accord-item">  <!-- Purchase -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#purchase" >
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i> <span>Purchases</span><i class="fa-solid fa-chevron-down"></i>
+                  </div>
+            
+                <div id="purchase" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                  <ul>
+                    <li> <a href="#" data-id="purchase-invoice" > Purchase Invoices </a> </li> 
+                    <li> <a href="#" data-id="mange-refund" > Purchase Refunds </a> </li> 
+                    <li> <a href="#" data-id="manage supplier" > Manage Suppliers </a> </li> 
+                    <li> <a href="#" data-id="supplier-payments" > Suppliers Payments </a> </li> 
                   </ul>
-                </div>  
-            </div> <!-- end header right -->
-
-          </div> <!-- end row -->
-        </div> <!-- end header content -->
-    
-        <div class="form-row-flex all-pages" >
-
-          <div id="sales-page" class="container" > <!-- Sales page  style="display: none;"   -->
-            <div>
-              <div class="user-name"> <!-- user log-->
-                  <br>
-                  <p class=" fs-16 py-2 mb-0" id="currentDate"></p>
-                  <h1 class="font-weight-normal fs-24  mt-0 mb-4 btn-search"><strong>Hi REY,</strong> Welcome Back</h1>
-              </div> 
-              <div class="row" > <!-- search-ba-->
-                <div class="col "> 
-                  <div class="card  shadow mb-3 widget-item col"> <!-- invoice search-->
-                    <div class="card-body">
-                        <form action="/owner/invoices/index" method="GET" id="InvoiceSearch">
-                            <div class=" input-group  ">
-                                <div class=" bg-white">
-                                  <i class="fa-solid fa-magnifying-glass mt-2"></i>
-                                </div>
-                                <input type="text" name="keywords" id="InvoiceQuery" aria-describedby="oi-db-search"  class="font-weight-regular form-control border-0 font-weight-normal fs-4 ui-autocomplete-input" placeholder="Invoices search" autocomplete="off">
-                                <div class="input-group-btn text-center">
-                                    <button type="submit" class=" text-uppercase btn-search mt-2 bg-white ">Search</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col "> 
-                  <div class="card  shadow mb-3 widget-item col">  <!-- client search-->
-                    <div class="card-body">
-                      <form method="GET" id="ClientSearch">
-                          <div class=" input-group  ">
-                              <div class=" bg-white">
-                                <i class="fa-solid fa-magnifying-glass mt-2"></i>
-                              </div>
-                              <input type="text" name="keywords" id="ClientQuery" aria-describedby="oi-db-search"  class="font-weight-regular form-control border-0 font-weight-normal  fs-4 ui-autocomplete-input" placeholder="Clients search" autocomplete="off">
-                              <div class="input-group-btn text-center">
-                                  <button type="submit" class=" text-uppercase btn-search mt-2 bg-white">Search</button>
-                              </div>
-                          </div>
-                      </form>
-                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row"> <!-- shortcut botton-->
-                  <div class="col-flex-xl row-flex ">
-                    <a href="/invoices/add" class="mb-4 btn-block btn-display  shortcutBtn shadow">
-                      <div class="d-flex justify-content-center align-items-center "><i class="fa-solid fa-file-invoice fs-36 py-4"></i></div>
-                      <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Create Invoice</span>
-                      </div>
-                    </a>
+      
+              <div class="accord-item">  <!-- Finance -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#finance" >
+                    <i class="fa-solid fa-money-check-dollar fa-lg"></i> <span>Finance</span><i class="fa-solid fa-chevron-down"></i>
                   </div>
-                  <div class="col-flex-xl row-flex">
-                    <a href="/invoices/index" class="mb-4 btn-block btn-display shortcutBtn shadow">
-                      <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-receipt d-block fs-36 py-4"></i></div>
-                      <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Invoices</span></div>
-                    </a>
+              
+                <div id="finance" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul>
+                      <li> <a href="#" data-id="expenses" > Expenses </a> </li> 
+                      <li> <a href="#" data-id="saved-reports" > Treasuries &amp; Bank Accounts </a> </li> 
+                    </ul>
                   </div>
-                  <div class="col-flex-xl row-flex">
-                    <a href="/clients/index" class="mb-4 btn-block btn-display shortcutBtn shadow">
-                      <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-user-tie d-block fs-36 py-4"></i></div>
-                      <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Clients</span></div>
-                    </a>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Accounting -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#accounting">
+                    <i class="fa-solid fa-calculator fa-lg"></i> <span>Accounting</span><i class="fa-solid fa-chevron-down"></i>
                   </div>
-                  <div class="col-flex-xl row-flex">
-                    <a href="/clients/add" class="mb-4 btn-block btn-display shortcutBtn shadow">
-                      <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-user-plus d-block fs-36 py-4"></i></div>
-                      <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">New Client</span></div>
-                    </a>
+              
+                <div id="accounting" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul>
+                      <li> <a href="#" data-id="journal-entries" > Journal Entries </a> </li> 
+                      <li> <a href="#" data-id="add-entry" > Add Entry </a> </li> 
+                      <li> <a href="#" data-id="char-account" > Chart of Accounts </a> </li> 
+                      <li> <a href="#" data-id="accounting-settings" > Accounting Settings </a> </li> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Request -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#request" >
+                    <i class="fa-solid fa-list fa-lg"></i> <span>Requests</span><i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                
+                <div id="request" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                  <ul> <li><a href="#" data-id="manage-request"> Manage Requests </a></li> </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Employees -->
+                  <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#employees" >
+                    <i class="fa-solid fa-users-line fa-lg"></i> <span>Employees</span><i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                
+                <div id="employees" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul><li><a href="#" data-id="add-new-client" > Manage Employees </a> </li> </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Attendance -->
+                <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#attendance" >
+                  <i class="fa-solid fa-clipboard-user fa-lg"></i> <span>Attendance</span><i class="fa-solid fa-chevron-down"></i>
+                </div>
+              
+                <div id="attendance" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul>
+                      <li><a href="#" data-id="attendance-log" > Attendance Logs </a> </li> 
+                      <li><a href="#" data-id="dailay-attendance" > Attendance Days </a> </li> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Payroll -->
+                <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#payroll" >
+                  <i class="fa-solid fa-file-invoice-dollar fa-lg"></i> <span>Payroll</span><i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div id="payroll" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul>
+                      <li><a href="#" data-id="contracts" > Contracts </a> </li> 
+                      <li><a href="#" data-id="payslips" > Payslips </a> </li> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="accord-item">  <!-- Reports -->
+                <div class="accord-button collapsed" onclick="menuButtonClick(event)" type="button" data-bs-toggle="collapse" data-bs-target="#reports">
+                  <i class="fa-solid fa-rectangle-list fa-lg"></i> <span>Reports</span><i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div id="reports" class="accord-collapse collapse" data-bs-parent="#sidebar">
+                  <div class="accord-body">
+                    <ul>
+                      <li> <a href="#" data-id="sales-reports" > Sales Reports </a> </li> 
+                      <li> <a href="#" data-id="purchase-reports" > Purchases Reports </a> </li> 
+                      <li> <a href="#" data-id="accounting-reports" > Accounting Reports </a> </li> 
+                      <li> <a href="#" data-id="cheques-reports"> Cheques Reports </a> </li> 
+                      <li> <a href="#" data-id="point-credit-reports" > Points and Credits Reports </a> </li> 
+                      <li> <a href="#" data-id="workflo-reports" > Workflow Reports </a> </li> 
+                      <li> <a href="#" data-id="work-order-reports" > Work Order Reports </a> </li> 
+                      <li> <a href="#" data-id="clients-reports" > Clients' Reports </a> </li> 
+                      <li> <a href="#" data-id="store-reports" > Store Reports </a> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-11">
+        <div class="content data-content" > <!-- content -->
+          <div class="">
+            
+            <div class="header-content container-fluid p-md-0">  <!-- header position-fixed -->
+              <div class="row">
+
+                <div class="col-6 header-left align-items-center ">
+                    <ul class="d-flex align-items-center p-md-0 m-0">
+                      <li class="shrink-sidebar list-unstyled p-md-0 "onclick="shrinkBtnClick(event)" >
+                        <i class="fa-solid fa-arrow-right-arrow-left p-3" ></i>
+                      </li>
+                      <li class="list-unstyled"><a>Dashboard > Sales </a></li>
+                    
+                    </ul>
+                    
+                </div>
+                
+                <div class="col-6 header-right d-flex align-items-center justify-content-end"> <!-- header right -->
+                    <div class="help "> <!-- help -->
+                      <ul>
+                        <li class="d-flex">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span class="text-decoration-none align-items-center"  >Help</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="notification "><!-- notification -->
+                      <ul>
+                        <li class="d-flex">
+                          <i class="fa-solid fa-bell"></i>
+                          <span>2352</span>
+                        </li>
+                      </ul> 
+                    </div> 
+
+                    <div class="account" onclick="toggleAccountMenu(event)"> <!-- account -->
+                      <ul class="d-flex align-items-center px-0">
+                        <li><i class="fa-solid fa-circle-user px-2"></i></li>
+                        <li class="user-account d-flex align-items-start justify-content-start">
+                          <a >Login<span class="caret"></span></a>
+                          <a>Baladiyah Branch</a>
+                        </li>
+                        <li class="account-menu d-none"  ><!--style="display: none;"-->
+                            <ul >
+                                <li><i class="fa-solid fa-user-tie "></i><a href="#">My Account</a></li>
+                                <li><i class="fa-regular fa-envelope "></i><a href="#">Change Email</a></li>
+                                <li><i class="fa-solid fa-key "></i><a href="#">Change Password</a></li>
+                                <li><i class="fa-solid fa-warehouse "></i><a href="#">Madina Branch</a></li>
+                                <li><i class="fa-solid fa-warehouse "></i><a href="#">Darb Branch</a></li>
+                                <li><i class="fa-solid fa-lock "></i><a href="#">Log Out</a></li>
+                            </ul>
+                        </li>
+                        
+                      </ul>
+                    </div>  
+                </div> <!-- end header right -->
+
+              </div> <!-- end row -->
+            </div> <!-- end header content -->
+
+            <div class="form-row-flex all-pages" >
+<!-- --------------------------------------------------------------------------------- -->
+              <div id="sales-page" class="container" > <!-- Sales page  style="display: none;"   -->
+                <div>
+                  <div class="user-name"> <!-- user log-->
+                      <br>
+                      <p class=" fs-16 py-2 mb-0" id="currentDate"></p>
+                      <h1 class="font-weight-normal fs-24  mt-0 mb-4 btn-search"><strong>Hi REY,</strong> Welcome Back</h1>
                   </div> 
-              </div>
+                  <div class="row" > <!-- search-ba-->
+                    <div class="col-6"> 
+                      <div class="card  shadow mb-3 widget-item col"> <!-- invoice search-->
+                        <div class="card-body">
+                            <form action="/owner/invoices/index" method="GET" id="InvoiceSearch">
+                                <div class=" input-group  ">
+                                    <div class=" bg-white">
+                                      <i class="fa-solid fa-magnifying-glass mt-2"></i>
+                                    </div>
+                                    <input type="text" name="keywords" id="InvoiceQuery" aria-describedby="oi-db-search"  class="font-weight-regular form-control border-0 font-weight-normal fs-4 ui-autocomplete-input" placeholder="Invoices search" autocomplete="off">
+                                    <div class="input-group-btn text-center">
+                                        <button type="submit" class=" text-uppercase btn-search mt-2 bg-white ">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
 
-              <div class="row " > <!--report sales head-->
-                <div class=" col "> 
-                  <div class="shadow d-flex sales-Header"> 
-                    <h3 class="text-center col-7 m-0"><span class="float-left p-2">Sales</span></h3>
-                    <div class="col-5 float-right ">
-                      <ul class="list-unstyled d-flex align-items-center justify-content-end p-2 m-0">
-                        <li>
-                          <a class="btn">
-                            <span class="d-inline-flex align-items-center">
-                              <i class="fa fa-bar-chart"></i>
-                              <span>Invoices</span>
-                            </span>
-                          </a>
-                        </li>
-                        <li >
-                          <a class="btn">
-                            <span class="d-inline-flex align-items-center">
-                              <i class="fa-regular fa-file-lines"></i>
-                              <span>Recent Invoices</span>
-                            </span>
-                          </a>
-                        </li>
-                        <li >
-                          <a class="btn">
-                            <span class="d-inline-flex align-items-center">
-                              <i class="fa fa-exclamation-triangle"></i>
-                              <span>Overdue Invoices</span>
-                              <span class="badge badge-danger bg-danger  ml-1 top-0">315</span>
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                  </div>
-                  </div>
-                </div>
-              </div>
+                    <div class="col-6"> 
+                      <div class="card  shadow mb-3 widget-item col">  <!-- client search-->
+                        <div class="card-body">
+                          <form method="GET" id="ClientSearch">
+                              <div class=" input-group  ">
+                                  <div class=" bg-white">
+                                    <i class="fa-solid fa-magnifying-glass mt-2"></i>
+                                  </div>
+                                  <input type="text" name="keywords" id="ClientQuery" aria-describedby="oi-db-search"  class="font-weight-regular form-control border-0 font-weight-normal  fs-4 ui-autocomplete-input" placeholder="Clients search" autocomplete="off">
+                                  <div class="input-group-btn text-center">
+                                      <button type="submit" class=" text-uppercase btn-search mt-2 bg-white">Search</button>
+                                  </div>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
 
-              <div class="row"> <!--report sales  data -->
-                <div class=""> 
-                  <div class="d-flex mb-4 h-100" > 
-                  <iframe src="/report-invoice.html" id="report-sales" class="container-fluid d-flex  p-0 m-0"></iframe>
                   </div>
-                </div>
-              </div>
+                  <div class="row"> <!-- shortcut botton-->
+                      <div class="col-flex-xl row-flex ">
+                        <a href="/invoices/add" class="mb-4 btn-block btn-display  shortcutBtn shadow">
+                          <div class="d-flex justify-content-center align-items-center "><i class="fa-solid fa-file-invoice fs-36 py-4"></i></div>
+                          <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Create Invoice</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-flex-xl row-flex">
+                        <a href="/invoices/index" class="mb-4 btn-block btn-display shortcutBtn shadow">
+                          <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-receipt d-block fs-36 py-4"></i></div>
+                          <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Invoices</span></div>
+                        </a>
+                      </div>
+                      <div class="col-flex-xl row-flex">
+                        <a href="/clients/index" class="mb-4 btn-block btn-display shortcutBtn shadow">
+                          <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-user-tie d-block fs-36 py-4"></i></div>
+                          <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">Clients</span></div>
+                        </a>
+                      </div>
+                      <div class="col-flex-xl row-flex">
+                        <a href="/clients/add" class="mb-4 btn-block btn-display shortcutBtn shadow">
+                          <div class="d-flex justify-content-center align-items-center"><i class="fa-solid fa-user-plus d-block fs-36 py-4"></i></div>
+                          <div class="d-flex justify-content-center align-items-center"><span class="fs-25 mb-3">New Client</span></div>
+                        </a>
+                      </div> 
+                  </div>
+                  <div class="data-head shadow"><!--report sales head-->
+                  <div class="row" > 
+                      <div class=" col-6">
+                        <div class="d-flex">
+                          <h3 class="text-center col-7 m-0"><span class="float-left p-2">Sales</span></h3>
+                        </div>
+                      </div>
+                      <div class="col-6 float-right ">
+                        <ul class="list-unstyled d-flex align-items-center justify-content-end p-2 m-0">
+                          <li>
+                            <a class="btn">
+                              <span class="d-inline-flex align-items-center">
+                                <i class="fa fa-bar-chart"></i>
+                                <span>Invoices</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li >
+                            <a class="btn">
+                              <span class="d-inline-flex align-items-center">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span>Recent Invoices</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li >
+                            <a class="btn">
+                              <span class="d-inline-flex align-items-center">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                <span>Overdue Invoices</span>
+                                <span class="badge badge-danger bg-danger  ml-1 top-0">315</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
-              <div class="row" > <!--report payment head  -->
-                <div class=" col "> 
-                  <div class="shadow d-flex paymentHeader"> 
-                    <h3 class="text-center col-7 m-0"><span class="float-left p-2">Payments</span></h3>
-                    <div class="col-5 float-right ">
-                      <ul class="list-unstyled d-flex align-items-center justify-content-end p-2 m-0">
-                        <li >
-                          <a class="btn">
-                            <span class="d-inline-flex align-items-center">
-                              <i class="fa fa-bar-chart"></i>
-                              <span>Statistics</span>
-                            </span>
-                          </a>
-                        </li>
-                        <li >
-                          <a class="btn">
-                            <span class="d-inline-flex align-items-center">
-                                <i class="fa fa-credit-card"></i> 
-                              <span>Recent Payments</span>
-                            </span>
-                          </a>
-                        </li>
-                        <a href="/owner/invoice_payments/index" class="d-none d-sm-inline-block ml-5 text-nowrap text-primary-2 p-0  border-0">View All</a>
-                      </ul>
+                  </div>
+                  <div class="row"> <!--report sales  data -->
+                    <div class=""> 
+                      <div class="d-flex mb-4 h-100" > 
+                      <iframe src="/report-invoice.html" id="report-sales"title="report-invoice" class="container-fluid d-flex  p-0 m-0"></iframe>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="row "> <!--report payment data -->
-                <div class="mb-4"> 
-                  <div class="d-flex bg-white mb-4 h-100" > 
-                  <iframe src="/report-payment.html" id="report-payment" class="container-fluid d-flex p-0 m-0">></iframe>
+                  
+                  <div class="data-head shadow"><!--report payment head  -->
+                    <div class="row" > 
+                      <div class="col-6 "> 
+                        <div class=""> 
+                          <h3 class="text-center"><span class="float-left p-2">Payments</span></h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="float-right ">
+                          <ul class="list-unstyled d-flex align-items-center justify-content-end p-2 m-0">
+                            <li >
+                              <a class="btn">
+                                <span class="d-inline-flex align-items-center">
+                                  <i class="fa fa-bar-chart"></i>
+                                  <span>Statistics</span>
+                                </span>
+                              </a>
+                            </li>
+                            <li >
+                              <a class="btn">
+                                <span class="d-inline-flex align-items-center">
+                                    <i class="fa fa-credit-card"></i> 
+                                  <span>Recent Payments</span>
+                                </span>
+                              </a>
+                            </li>
+                            <li><a href="/owner/invoice_payments/index" class="d-none d-sm-inline-block ml-5 text-nowrap text-primary-2 p-0  border-0">View All</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div class="row "> <!--report payment data -->
+                    <div class="mb-4"> 
+                      <div class="d-flex bg-white mb-4 h-100" > 
+                      <iframe src="/report-payment.html" id="report-payment" title="report-payment" class="container-fluid d-flex p-0 m-0">></iframe>
+                      </div>
+                    </div>
+                  </div>  
+
                 </div>
               </div>  
+<!-- -------------------------------------------------------- -->
+              <div id="human-resource-page clearfix" > <!-- human-resuorces-page  style="display: none;"   -->
 
-            </div>
-          </div>  
+                <div class="page-head bg-white container-fluid m-0 p-0" >
+                  <div class="container py-4">
+                    <div class="row d-flex">
+                      <div class="col-6 align-content-center">
+                          <span class="align-items-center ">Human Resources</span>
+                      </div>
+                      <div class="col-6 d-flex clearfix justify-content-end">
+                          <div class="p-0 ">
+                            <a class="dropdown-item" href="#"><i class="fas fa-cog px-2"></i>Manage Widgets</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-          <div id="human-resuorce-page" > <!-- human-resuorces-page  style="display: none;"   -->
-            <div class="page-head d-flex align-items-center border-bottom py-2 bg-white" >
-              <div class="container-fluid ">
-                  <div class="row align-items-center">
-                      <div class="row">
-                        <div class="col-6 header-left align-items-center ">
-                            <span class="align-items-center d-inline-flex">Human Resources</span>
+                <div class="hr-content mb-4">
+                  <div class="">
+                    <div class="row ">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Pending Request</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Attendance Flag Summary</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Leave Summary</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Employee List</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                          
                         </div>
-                        <div class="col-6 header-right d-flex align-items-center justify-content-end ">
-                            <div class="d-flex align-items-center justify-content-end px-2">
-                                <div class="dropdown">
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cog px-2"></i>Manage Widgets</a>
-                                </div>
+                      </div>
+    
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Pending Request</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                          <div class="data-item">
+                            <div class=" data-head shadow">
+                              <div class=" row ">
+                                <div class="col-6"><span >Pending Request</span></div>
+                                <div class="col-6"><a href="#">View All</a></div>
+                              </div>
+                            </div>
+                            <div class="data-view" ></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    
+                    </div>
+                  </div>
+
+                </div>
+
+                
+              </div>
+<!-- -------------------------------------------------------- -->
+              <div id="manage-invoice-page"> <!-- manage- invoice -page  style="display: none;"   -->
+                <div class="pages-head d-flex align-items-center border-bottom py-2 container-fluid ">
+                  
+                  <div class="row pages-head bg-white container">
+                    <div class="col-6 ">
+                      
+                        <div class="actionItemBtn d-flex align-items-center">
+                            <div class="btn-group select-items none-view px-2">
+                                <span type="button" class="btn btn-default" title="Select">
+                                    <div class="clip-check check-info">
+                                      <label for="select_all_chk">Select All</label>
+                                      <input class=" responsive_check_row check-input" type="checkbox" id="select_all_chk" title="" name="select_all_chk" aria-label="">
+                                      <label for="select_all_chk"> </label>
+                                    </div>
+                                </span>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-label="dp-item">
+                                  <span class="caret"></span>
+                                </button>
+                    
+                                <ul class="dropdown-menu">
+                                    <li><a id="index-select-type-none" href="#">None</a></li>
+                                    <li><a id="index-select-type-page" href="#">All <small>(Current Page)</small></a></li>
+                                    <li><a id="index-select-type-all-filtered" href="#">All Filtered <small>(All Pages)</small></a></li>
+                                </ul>
+                            </div>
+                            <div class="right" id="pagin-desc">
+                              <span class="px-4">
+                                  <span>
+                                      <span id="nav-from-record" class="ts">1</span>-<span id="nav-to-record">20</span>
+                                  </span> of
+                                  <span id="nav-of-record" >1254</span>
+                              </span>
+                          </div>
+                    
+                            <div class="btn-group do-actions none-view">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Actions For Selected">
+                                    Actions <span data-listing-limit="20" data-listing-current-page="20" id="action-selected-count"></span>
+                                  <span class="caret"></span>
+                                </button>
+                                    <ul class="dropdown-menu" id="listing-select-actions">
+                                        <li><a href="#" ><i class=""></i> Send To Client</a></li>
+                                        <li><a href="#" ><i class=""></i> Mark as paid</a></li>
+                                        <li><a href="#" ><i class=""></i> Print PDF</a></li>
+                                        <li><a href="#" ><i class=""></i> Export</a></li>
+                                        <li><a href="#" ><i class=""></i> Send Sms</a></li>
+                                    </ul>
+                              </div>
+                    
+
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        <div class=" text-end">
+                            <div class="top-actions">   
+                              <a class="btn  btn-lg btn-default right button"> <i class="fa fa-pie-chart"></i> </a>                       
+                              <a  class="add-new-btn  btn btn-success btn-addon width-auto btn-lg  button right">
+                                  <span><i class="fa fa-plus"></i>New Invoice</span></a>
+                              <a class="btn btn-lg btn-default right none-view test" >Appointments</a>
+                                          
                             </div>
                         </div>
-                      </div>
-                  </div>
+                
+                    </div>
                 </div>
-            </div>
+                
 
-            <div class="row page-content ">
-              <div class="col-6">
-                <div class="row">
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Pending Request</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Attendance Flag Summary</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Leave Summary</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Employee List</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                  
                 </div>
-              </div>
 
-              <div class="col-6">
-                <div class="row">
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Pending Request</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                  <div class="data-item">
-                    <div class=" data-head shadow">
-                      <div class=" row ">
-                        <div class="col-6"><span >Pending Request</span></div>
-                        <div class="col-6"><a href="#">View All</a></div>
-                      </div>
-                    </div>
-                    <div class="data-view" ></div>
-                  </div>
-                </div>
+                
               </div>
               
-            
-            </div>
-          </div>
-
-          <div id="manage-invoice-page"> <!-- manage- invoice -page  style="display: none;"   -->
-            <div class="pages-head d-flex align-items-center border-bottom py-2 container-fluid ">
               
-              <div class="row pages-head bg-white container">
-                <div class="col-6 ">
-                  
-                    <div class="actionItemBtn d-flex align-items-center">
-                        <div class="btn-group select-items none-view px-2">
-                            <span type="button" class="btn btn-default" title="Select">
-                                <div class="clip-check check-info">
-                                    <input class=" responsive_check_row check-input" type="checkbox" id="select_all_chk" value="" name="">
-                                    <label for="select_all_chk"></label>
-                                 </div>
-                            </span>
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                              <span class="caret"></span>
-                            </button>
-                
-                            <ul class="dropdown-menu">
-                                <li><a id="index-select-type-none" href="#">None</a></li>
-                                <li><a id="index-select-type-page" href="#">All <small>(Current Page)</small></a></li>
-                                <li><a id="index-select-type-all-filtered" href="#">All Filtered <small>(All Pages)</small></a></li>
-                            </ul>
-                        </div>
-                        <div class="right" id="pagin-desc">
-                          <span class="px-4">
-                              <span>
-                                  <span id="nav-from-record" class="ts">1</span>-<span id="nav-to-record">20</span>
-                              </span> of
-                              <span id="nav-of-record" >1254</span>
-                          </span>
-                      </div>
-                
-                        <div class="btn-group do-actions none-view">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Actions For Selected">
-                                Actions <span data-listing-limit="20" data-listing-current-page="20" id="action-selected-count"></span>
-                              <span class="caret"></span>
-                            </button>
-                                <ul class="dropdown-menu" id="listing-select-actions">
-                                    <li><a href="#" ><i class=""></i> Send To Client</a></li>
-                                    <li><a href="#" ><i class=""></i> Mark as paid</a></li>
-                                    <li><a href="#" ><i class=""></i> Print PDF</a></li>
-                                    <li><a href="#" ><i class=""></i> Export</a></li>
-                                    <li><a href="#" ><i class=""></i> Send Sms</a></li>
-                                </ul>
-                          </div>
-                
+            </div>    <!-- all pages container -->
 
-                    </div>
-                </div>
-                <div class="col-6 ">
-                    <div class=" text-end">
-                        <div class="top-actions">   
-                          <a class="btn  btn-lg btn-default right button"> <i class="fa fa-pie-chart"></i> </a>                       
-                          <a  class="add-new-btn  btn btn-success btn-addon width-auto btn-lg  button right">
-                              <span><i class="fa fa-plus"></i>New Invoice</span></a>
-                          <a class="btn btn-lg btn-default right none-view test" >Appointments</a>
-                                       
-                        </div>
-                    </div>
-            
-                </div>
-            </div>
-            
-
-            </div>
-
-            
-          </div>
-          
-          
-        </div>    <!-- all pages container -->
-
-    
-      </div> <!-- end d-flex flex-column -->      
-    </div> <!-- end content -->      
+        
+          </div> <!-- end d-flex flex-column -->      
+        </div> <!-- end content -->    
+      </div>
+    </div>
+  </div>  
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -674,3 +693,5 @@
 
 </body>
 </html>
+
+
