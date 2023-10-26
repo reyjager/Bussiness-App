@@ -45,6 +45,8 @@ document.addEventListener('click', function(event) {
     const logo = document.getElementById("img-logo");
     const mlogo = document.querySelector(".logo");
     const accordButtons = document.querySelectorAll(".accord-button");
+    const widthC = document.querySelector(".content");
+    const widthHC =document.querySelector(".header-content");
 
     navbar.style.transition = 'width 0.5s';
    
@@ -61,15 +63,22 @@ document.addEventListener('click', function(event) {
         // Check if the "hideme" class is already present, and toggle it
         if (subElement.classList.contains('hideme')) {
           subElement.classList.remove('hideme');
-          navbar.style.width = '200px';
+          navbar.style.width = '226px';
           navbar.style.justifyContent = 'space-around';
           
+          widthC.style.marginLeft = '226px';
+          widthHC.style.marginLeft = '226px';
           
+          navbar.style.transition = widthHC.style.transition = widthC.style.transition ='width 0.9s';
       
         } else {
           // accordButtons.classList.add('hideme'); // make sure that  if accord-body is open. it should be closed
           subElement.classList.add('hideme');
-            navbar.style.width = '55px';
+            navbar.style.width = '60px';
+            widthC.style.marginLeft = '60px';
+            widthHC.style.marginLeft = '60px';
+            navbar.style.transition = widthHC.style.transition = widthC.style.transition ='width 0.5s';
+
        
         }
       });
@@ -90,9 +99,6 @@ document.addEventListener('click', function(event) {
       mlogo.style.transition ='height .5s';
       logo.style.transition = 'width 0.5s';
       logo.src = "/images/hoberman.jpeg";
-      
-     
-  
   
     } else {
       // If the current logo source is the new logo or any other source, change it back to the original logo

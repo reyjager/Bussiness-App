@@ -1,8 +1,7 @@
-
-
 .content {
   background: #dfe6ed; 
   overflow: auto;
+  margin-left: 210px;
 }
 
 .header-content {
@@ -10,7 +9,7 @@
   justify-content: space-between;
   background-color: rgb(9, 96, 96);
   color: white;
-  
+  margin-left: 226px;
 }
 .header-content ul{
   margin: 5px;
@@ -20,7 +19,6 @@
   display: flex;
   align-items: center;
   list-style: none;
-  
   margin: 0;
   padding: 0 10px;
   
@@ -348,5 +346,9 @@ notification > ul > li > i,
   background: #dbe7f3;
   border: 0;
   color: #3a3e63!important;
-  transition: all .2s ease-in-out;
+  /* transition: all .5s ease-in-out; */
 }
+
+/* .openPage{
+  display: ;
+} */
